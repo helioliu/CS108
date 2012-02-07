@@ -1,0 +1,17 @@
+Helio Liu
+Picassa Part 3 + Part 2 rework rework
+
+02/04/12 - 02/06/12
+Expected 3hr; actual much longer
+*Tried to subclass Variable.java again into x, y, etc. to get rid of the
+ if tree checking for independent variables.  Doing this screwed up a
+ lot of stuff which I couldn't really figure out how to fix and made it
+ difficult to distinguish between independent variables and let variables
+ with the same name as independent variables.  In the end I just kept the
+ tree but created a mapping class so Variable wasn't storing and passing
+ other Variables depending on if they were let variable mappings.
+ 
+ No consultation/written resources/test files/IO files
+ 
+ Some extra info on regular expressions when adding new functions would
+ have been helpful for this assignment.  
