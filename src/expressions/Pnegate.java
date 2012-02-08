@@ -17,30 +17,17 @@ public class Pnegate extends ParenExp{
 	}
 
 	
-	public static class Factory extends ParenExp.Factory
+	public static class Factory extends PExpParamFactories.Factory1P
     {
 
         protected String commandName() {
-            return "neg";
-        }
-
-        protected int numberOfParameters() {
-            return 1;
+            return "neg!";
         }
 
         protected ParenExp constructParenExpression(List<Expression> subExpressions) {
             return new Pnegate(subExpressions);
         }
         
-    }
-	
-	public static class Factory2 extends Pnegate.Factory
-    {
-
-        protected String commandName() {
-            return "!";
-        }
-
     }
 
 }

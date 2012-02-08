@@ -4,7 +4,6 @@ import java.awt.Dimension;
 import java.util.ArrayList;
 
 import expressions.Expression;
-import expressions.Variable;
 import expressions.Vmapping;
 
 

@@ -27,7 +27,6 @@ public class ExpressionFactory {
 		eTypes.add(new Pfloor.Factory());
 		eTypes.add(new Plog.Factory());
 		eTypes.add(new Pnegate.Factory());
-		eTypes.add(new Pnegate.Factory2());
 		eTypes.add(new Prgbtoycrcb.Factory());
 		eTypes.add(new Psine.Factory());
 		eTypes.add(new Ptangent.Factory());
@@ -35,29 +34,23 @@ public class ExpressionFactory {
 		eTypes.add(new Pycrcbtorgb.Factory());
 		//2 op
 		eTypes.add(new Pdivide.Factory());
-		eTypes.add(new Pdivide.Factory2());
 		eTypes.add(new Pexponent.Factory());
-		eTypes.add(new Pexponent.Factory2());
 		eTypes.add(new Pminus.Factory());
-		eTypes.add(new Pminus.Factory2());
 		eTypes.add(new Pmodulus.Factory());
-		eTypes.add(new Pmodulus.Factory2());
 		eTypes.add(new Pmultiply.Factory());
-		eTypes.add(new Pmultiply.Factory2());
 		eTypes.add(new Pperlinbw.Factory());
 		eTypes.add(new Pperlincolor.Factory());
 		eTypes.add(new Pplus.Factory());
-		eTypes.add(new Pplus.Factory2());
 		//3 op
 		eTypes.add(new Pcolor.Factory());
 		eTypes.add(new Plet.Factory());
 		eTypes.add(new Pif.Factory());
 		//inf op
-		eTypes.add(new PIsum.Factory());
-		eTypes.add(new PIproduct.Factory());
-		eTypes.add(new PIaverage.Factory());
-		eTypes.add(new PImin.Factory());
-		eTypes.add(new PImax.Factory());
+		eTypes.add(new Psum.Factory());
+		eTypes.add(new Pproduct.Factory());
+		eTypes.add(new Paverage.Factory());
+		eTypes.add(new Pmin.Factory());
+		eTypes.add(new Pmax.Factory());
 	}
 	
 	public Expression getExpression(Parser parser){

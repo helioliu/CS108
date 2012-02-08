@@ -22,19 +22,13 @@ public class Pif extends ParenExp {
 	
 	private boolean getCondition(RGBColor color){
 		double value = (color.getRed() + color.getGreen() + color.getBlue())/3.0;
-		if(value>0)
-			return true;
-		return false;
+		return value>0;
 	}
 
-	public static class Factory extends ParenExp.Factory {
+	public static class Factory extends PExpParamFactories.Factory3P {
 
 		protected String commandName() {
 			return "if";
-		}
-
-		protected int numberOfParameters() {
-			return 3;
 		}
 
 		protected ParenExp constructParenExpression(List<Expression> subExpressions) {

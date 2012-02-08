@@ -18,28 +18,15 @@ public class Pmodulus extends ParenExp{
 	}
 
 	
-	public static class Factory extends ParenExp.Factory
+	public static class Factory extends PExpParamFactories.Factory2P
     {
 
         protected String commandName() {
-            return "mod";
-        }
-
-        protected int numberOfParameters() {
-            return 2;
+            return "mod%";
         }
 
         protected ParenExp constructParenExpression(List<Expression> subExpressions) {
             return new Pmodulus(subExpressions);
-        }
-        
-    }
-	
-	public static class Factory2 extends Pmodulus.Factory
-    {
-
-        protected String commandName() {
-            return "%";
         }
         
     }

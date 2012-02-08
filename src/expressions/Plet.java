@@ -18,14 +18,10 @@ public class Plet extends ParenExp {
 		return result;
 	}
 
-	public static class Factory extends ParenExp.Factory {
+	public static class Factory extends PExpParamFactories.Factory3P {
 
 		protected String commandName() {
 			return "let";
-		}
-
-		protected int numberOfParameters() {
-			return 3;
 		}
 
 		protected ParenExp constructParenExpression(List<Expression> subExpressions) {

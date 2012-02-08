@@ -17,15 +17,11 @@ public class Prandom extends ParenExp{
 		return 2*Math.random()-1;
 	}
 	
-	public static class Factory extends ParenExp.Factory
+	public static class Factory extends PExpParamFactories.Factory0P
     {
 
         protected String commandName() {
             return "random";
-        }
-
-        protected int numberOfParameters() {
-            return 0;
         }
 
         protected ParenExp constructParenExpression(List<Expression> subExpressions) {

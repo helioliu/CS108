@@ -18,28 +18,15 @@ public class Pmultiply extends ParenExp{
 	}
 
 	
-	public static class Factory extends ParenExp.Factory
+	public static class Factory extends PExpParamFactories.Factory2P
     {
 
         protected String commandName() {
-            return "mul";
-        }
-
-        protected int numberOfParameters() {
-            return 2;
+            return "mul*";
         }
 
         protected ParenExp constructParenExpression(List<Expression> subExpressions) {
             return new Pmultiply(subExpressions);
-        }
-        
-    }
-	
-	public static class Factory2 extends Pmultiply.Factory
-    {
-
-        protected String commandName() {
-            return "*";
         }
         
     }

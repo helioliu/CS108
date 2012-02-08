@@ -18,15 +18,11 @@ public class Pwrap extends ParenExp{
 		return toWrap;
 	}
 	
-	public static class Factory extends ParenExp.Factory
+	public static class Factory extends PExpParamFactories.Factory1P
     {
 
         protected String commandName() {
             return "wrap";
-        }
-
-        protected int numberOfParameters() {
-            return 1;
         }
 
         protected ParenExp constructParenExpression(List<Expression> subExpressions) {

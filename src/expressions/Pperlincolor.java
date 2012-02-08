@@ -18,15 +18,11 @@ public class Pperlincolor extends ParenExp{
 	}
 
 	
-	public static class Factory extends ParenExp.Factory
+	public static class Factory extends PExpParamFactories.Factory2P
     {
 
         protected String commandName() {
             return "perlinColor";
-        }
-
-        protected int numberOfParameters() {
-            return 2;
         }
 
         protected ParenExp constructParenExpression(List<Expression> subExpressions) {

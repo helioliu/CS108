@@ -18,28 +18,15 @@ public class Pdivide extends ParenExp{
 	}
 
 	
-	public static class Factory extends ParenExp.Factory
+	public static class Factory extends PExpParamFactories.Factory2P
     {
 
         protected String commandName() {
-            return "div";
-        }
-
-        protected int numberOfParameters() {
-            return 2;
+            return "div/";
         }
 
         protected ParenExp constructParenExpression(List<Expression> subExpressions) {
             return new Pdivide(subExpressions);
-        }
-        
-    }
-	
-	public static class Factory2 extends Pdivide.Factory
-    {
-
-        protected String commandName() {
-            return "/";
         }
         
     }

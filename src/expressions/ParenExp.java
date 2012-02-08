@@ -37,18 +37,24 @@ public abstract class ParenExp extends Expression{
         public boolean isKindOfExpression(Parser parser) {
             if(!regexMatches(EXPRESSION_BEGIN_REGEX, parser))
                 return false;
-            return getCommand(parser).equals(commandName());
+            
+            return commandName().contains(getCommand(parser));
+            //return getCommand(parser).equals(commandName());
         }
 
         public Expression parseExpression(Parser parser) {
             if(!isKindOfExpression(parser))
                 throw new ParserException("Attempt to parse invalid string as " + commandName() + " paren expression");
             
-            parser.advanceCurrentPosition(commandName().length() + 1);
+            int toAdv = getCommand(parser).length();
+            parser.advanceCurrentPosition(toAdv+1);
+            //parser.advanceCurrentPosition(commandName().length() + 1);
 
             List<Expression> subexpressions = new ArrayList<Expression>();
-            for(int i = 0; i < numberOfParameters(); i++) {
+            int exprCount = 0;
+            while(parser.currentCharacter() != ')' && exprCount < numberOfParameters()){
                 subexpressions.add(parser.parseExpression());
+                exprCount++;
             }
             
             parser.skipWhiteSpace();

@@ -18,28 +18,15 @@ public class Pminus extends ParenExp{
 	}
 
 	
-	public static class Factory extends ParenExp.Factory
+	public static class Factory extends PExpParamFactories.Factory2P
     {
 
         protected String commandName() {
-            return "minus";
-        }
-
-        protected int numberOfParameters() {
-            return 2;
+            return "minus-";
         }
 
         protected ParenExp constructParenExpression(List<Expression> subExpressions) {
             return new Pminus(subExpressions);
-        }
-        
-    }
-	
-	public static class Factory2 extends Pminus.Factory
-    {
-
-        protected String commandName() {
-            return "-";
         }
         
     }

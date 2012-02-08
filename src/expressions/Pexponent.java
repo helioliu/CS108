@@ -18,28 +18,15 @@ public class Pexponent extends ParenExp{
 	}
 
 	
-	public static class Factory extends ParenExp.Factory
+	public static class Factory extends PExpParamFactories.Factory2P
     {
 
         protected String commandName() {
-            return "exp";
-        }
-
-        protected int numberOfParameters() {
-            return 2;
+            return "exp^";
         }
 
         protected ParenExp constructParenExpression(List<Expression> subExpressions) {
             return new Pexponent(subExpressions);
-        }
-        
-    }
-	
-	public static class Factory2 extends Pexponent.Factory
-    {
-
-        protected String commandName() {
-            return "^";
         }
         
     }
